@@ -13,7 +13,7 @@ function SearchWeather() {
       if(componentMounted) {
         setData(await response.json());
       }
-
+      
       return () => {
         componentMounted = false
       }
