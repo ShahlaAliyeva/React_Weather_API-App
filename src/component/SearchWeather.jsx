@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 function SearchWeather() {
-  const [search, setSearch] = useState('london');
+  const [search, setSearch] = useState('baku');
   const [data, setData] = useState([]);
   const [input, setInput] = useState(['']);
   let componentMounted = true;
@@ -13,7 +13,7 @@ function SearchWeather() {
       if(componentMounted) {
         setData(await response.json());
       }
-      
+
       return () => {
         componentMounted = false
       }
